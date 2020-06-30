@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+:root {
+    --primary-color: #6FFFE9;
+    --secondary-color: #0B132B;
+}
+
+body {
+    background: var(--secondary-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+        .navbar {
+            background: var(--secondary-color);
+            z-index: 99;
+            padding: 1rem;
+            top: 0;
+            position: sticky;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+            .logo {
+                width: 4rem;
+            }
+
+            /* Toggle Button */
+            .menuBtn {
+                width: 2.6rem;
+                margin: auto 0;
+                z-index: 111;
+            }
+
+                .menuBtn:hover {
+                    cursor: pointer;
+                }
+
+            .bar1,
+            .bar2,
+            .bar3 {
+                margin: 0.45rem 0;
+                background: var(--primary-color);
+                height: 0.3rem;
+                border-radius: 50px;
+                transition: all .2s ease-in-out;
+            }
+
+            .change.bar1 {
+                transform: translateY(12px) rotate(135deg);
+            }
+
+            .change.bar2 {
+                transform: scale(0);
+            }
+
+            .change.bar3 {
+                transform: translateY(-12px) rotate(-135deg);
+            }
+
+            /* Navbar Links */
+            .list-container {
+                z-index: 11;
+                width: 100%;
+                height: fit-content;
+                border-radius: 1rem;
+                border: 2px solid var(--primary-color);
+                background: var(--secondary-color);
+                font-size: 1.5rem;
+                margin: 2rem 0 0;
+                padding: 0 0 0.8rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .hide {
+                display: none;
+            }
+
+                .nav-list {
+                    list-style-type: none;
+                    text-align: center;
+                }   
+
+                    .nav-list-item {
+                        margin: 3rem auto;
+                        transition: all .2s ease-in-out;
+                    }
+
+                    .nav-list-item:hover {
+                        transform: scale(1.1);
+                    }
+
+                        .nav-link {
+                            display: inline;
+                            text-decoration: none;
+                            color: var(--primary-color);
+                        }
+
+                        .downBtn {
+                            background: var(--primary-color);
+                            color: var(--secondary-color);
+                            border-radius: 100px;
+                            padding: 0.8rem 2rem;
+                        }
+        /* Video Section */
+        .video-section {
+            margin: 3rem 1rem;
+        }   
+            
+        .iframe-container{
+            margin: auto;
+            position: relative;
+            padding-bottom: 36.25%; 
+            height: 0;
+        }
+        .iframe-container iframe{
+            margin: auto;
+            position: absolute;
+            top:0;
+            left: 0;
+            height: 100%;
+        }
+
+        .iframe-container, .iframe-container iframe {
+            width: 100%;
+            min-height: 100px;
+            max-width: 800px;
+            max-height: 500px;
+        }
+
+    .wave svg {
+        width: 100%;
+        height: 40px;
+        transform: rotate(-180deg);
+    }
+
+
+
+@media only screen and (min-width: 662px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .menuBtn {
+        display: none;
+    }
+    
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        justify-content: space-between;
+    }
+
+        .list-container {
+            padding: 0;
+            border: none;
+            width: fit-content;
+            margin: auto 0;
+        }
+
+        .nav-list {            
+            display: flex;
+            flex-direction: row;
+        }
+
+        .hide {
+            display: flex;
+        }
+
+            .nav-list-item {
+                margin: 0 0 0 2.2rem;
+            }
+    .wave svg {
+        height: 60px;
+    }    
+}
+
+
+@media only screen and (min-width: 836px) {
+    .container {
+        width: 90%;
+    }
+        .nav-list-item {
+            margin: 0 0 0 4rem;
+        }
+    .wave svg {
+        height: 80px;
+    }
+}
