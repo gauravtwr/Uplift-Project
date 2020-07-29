@@ -62,14 +62,6 @@ body {
         padding: 0 1rem 2rem;
         color: $primary-text-color;
 
-        .navbar {
-            padding: 1rem 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.5rem;
-        }
-
         .banner-section {
             margin-top: 2rem;
 
@@ -190,15 +182,12 @@ body {
         .circle {
             top: -220px;
             left: -180px;
+            max-width: 120vw;
+            max-height: 120vw;
         }
 
         .header-content {
-            padding: 0 3rem 2rem;   
-
-            .navbar {
-                font-size: 2rem;
-                padding: 2rem 0;
-            }
+            padding: 0 3rem 2rem;
 
             .banner-section {
                 .banner-content {
@@ -242,7 +231,7 @@ body {
 // Desktop: Small Laptop
 @media screen and (min-width: 882px) {
     .header {
-        height: 100vh;
+        height: calc(100vh - 56px);
 
         .circle {
             width: $sm-lap-bg-circle-size;
@@ -256,7 +245,7 @@ body {
         .header-content {
             padding: 0;
             width: 90%;
-            margin: 0 auto;
+            margin: auto;
 
             .banner-section {
                 margin: 0;
@@ -286,6 +275,7 @@ body {
 
                         .btn {
                             margin: auto auto auto 0;
+                            padding: 0.8rem 1rem;
                             text-align: center;
                             font-size: 1.3rem;
                             width: 70%;
@@ -296,6 +286,7 @@ body {
 
                     .banner-video {
                         width: 100%;
+                        max-width: 120vh;
                     }
                 }
 
