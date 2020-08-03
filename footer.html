@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/5a55d06455.js"></script>
+    <title>Footer</title>
+
+    <style>
+        footer{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: #3A506B;
+            width: 100%;
+            color: rgba(255, 255, 255, 0.904);
+            height: 30vh;
+            padding: 8vh;
+            font-size: 17px;
+        }
+        .icons{
+            width: 40%;
+            font-size: 20px;
+            color: #3A506B;
+        }
+        .space{
+          position: relative;
+            box-shadow: 0 5px 4px rgb(199, 194, 194,0.5);
+            border-radius: 50%;
+            background-color: white;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            transition: 0.6s;
+        }
+        .fa{
+            font-size: 20px;
+            line-height: 40px;
+        }
+        .space:hover{
+            transform: translate(0,10px);
+        }
+       .links{
+           display: flex;
+           flex-direction: column;
+        
+       }
+      .links a{
+        text-decoration: none;
+           color: white;
+           line-height: 30px;
+       }
+       .links a:hover{
+           color: rgb(187, 183, 183);
+       }
+       
+        
+
+    </style>
+</head>
+<body>
+    <footer>
+        <div class="row">
+            <div class="col-lg-4">A Website designed by <br>The Uplift Project
+                <p>© Company Inc.</p></div>
+            <div class="col-lg-5"><h5>Find Us</h5>
+                <div class="icons">
+                <i class="fa fa-instagram space"></i>
+                <i class="fa fa-linkedin space"></i>
+                <i class="fa fa-facebook space"></i>
+                <i class="fa fa-twitter space"></i>
+            </div>
+           
+            </div>
+            <div class="col-lg-3 links">
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+            
+        </div>
+    </footer>
+</body>
+</html>
