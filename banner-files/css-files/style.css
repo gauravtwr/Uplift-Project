@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.header {
+  background: #1c2541;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+}
+
+.header .circle {
+  background: #0b132b;
+  width: 150vw;
+  height: 150vw;
+  min-width: 400px;
+  min-height: 400px;
+  max-width: 872px;
+  max-height: 872px;
+  position: absolute;
+  left: -265px;
+  top: -146px;
+  border-radius: 100%;
+}
+
+.header .header-content {
+  z-index: 1;
+  padding: 0 1rem 2rem;
+  color: white;
+}
+
+.header .header-content .banner-section {
+  margin-top: 2rem;
+}
+
+.header .header-content .banner-section .banner-content {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 16vw;
+}
+
+.header .header-content .banner-section .banner-content .banner-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .header-content .banner-section .banner-content .banner-text h1 {
+  font-family: "Maven Pro", sans-serif;
+  color: #6fffe9;
+  font-size: 9vw;
+}
+
+.header .header-content .banner-section .banner-content .banner-text p {
+  font-family: "Tajawal", sans-serif;
+  font-size: 4vw;
+  margin: 1rem 0 2rem;
+}
+
+.header .header-content .banner-section .banner-content .banner-text .btn {
+  border-radius: 8px;
+  background: #6fffe9;
+  color: black;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 5vw;
+  padding: 0.8rem 1rem;
+  width: 80%;
+  margin: auto;
+  -webkit-transition: ease 0.2s all;
+  transition: ease 0.2s all;
+}
+
+.header .header-content .banner-section .banner-content .banner-text .btn:hover {
+  cursor: pointer;
+  background-color: #5bc0be;
+}
+
+.header .header-content .banner-section .banner-content .banner-video {
+  margin: auto;
+  width: 100%;
+  border-radius: 1.125rem;
+  border: 2px solid #5bc0be;
+}
+
+.header .header-content .banner-section .decor-text {
+  font-family: "Maven Pro", sans-serif;
+  font-weight: 700;
+  font-size: 20vw;
+  color: rgba(58, 80, 107, 0.2);
+  margin: 1rem auto;
+}
+
+.header .header-content .banner-section .arrow-container {
+  margin: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  -webkit-animation: up-down 2s infinite;
+          animation: up-down 2s infinite;
+}
+
+.header .header-content .banner-section .arrow-container .arrow {
+  width: 2rem;
+  height: 1rem;
+  display: block;
+  stroke: #3a506b;
+}
+
+.header .header-content .banner-section .arrow-container .first-arrow {
+  stroke: #3a506b;
+  -webkit-animation: color-change 2s infinite;
+          animation: color-change 2s infinite;
+}
+
+.header .header-content .banner-section .arrow-container .second-arrow {
+  stroke: #6fffe9;
+  -webkit-animation: color-change 2s infinite;
+          animation: color-change 2s infinite;
+}
+
+@-webkit-keyframes color-change {
+  50% {
+    stroke: #6fffe9;
+  }
+  100% {
+    stroke: #3a506b;
+  }
+}
+
+@keyframes color-change {
+  50% {
+    stroke: #6fffe9;
+  }
+  100% {
+    stroke: #3a506b;
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 1rem;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 1rem;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@media screen and (min-width: 494px) {
+  .header {
+    width: 100%;
+  }
+  .header .circle {
+    top: -220px;
+    left: -180px;
+    max-width: 120vw;
+    max-height: 120vw;
+  }
+  .header .header-content {
+    padding: 0 3rem 2rem;
+  }
+  .header .header-content .banner-section .banner-content {
+    row-gap: 10vw;
+  }
+  .header .header-content .banner-section .banner-content .banner-text h1 {
+    font-size: 4rem;
+  }
+  .header .header-content .banner-section .banner-content .banner-text p {
+    font-size: 1.5rem;
+    margin: 1rem 0 3rem;
+  }
+  .header .header-content .banner-section .banner-content .banner-text .btn {
+    font-size: 1.8rem;
+    width: 60%;
+    max-width: 400px;
+    min-width: 300px;
+    padding: 1rem;
+  }
+  .header .header-content .banner-section .decor-text {
+    font-size: 16vw;
+  }
+  .header .header-content .banner-section .arrow-container .arrow {
+    width: 2.5rem;
+    height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 882px) {
+  .header {
+    height: calc(100vh - 56px);
+  }
+  .header .circle {
+    width: 65vw;
+    height: 65vw;
+    left: -170px;
+    top: -170px;
+    max-width: 850px;
+    max-height: 850px;
+  }
+  .header .header-content {
+    padding: 0;
+    width: 90%;
+    margin: auto;
+  }
+  .header .header-content .banner-section {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 80vh;
+  }
+  .header .header-content .banner-section .banner-content {
+    -ms-grid-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.5fr;
+    -webkit-column-gap: 1.8rem;
+            column-gap: 1.8rem;
+    margin: auto;
+  }
+  .header .header-content .banner-section .banner-content .banner-text {
+    text-align: left;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto 0;
+  }
+  .header .header-content .banner-section .banner-content .banner-text h1 {
+    font-size: 3rem;
+  }
+  .header .header-content .banner-section .banner-content .banner-text p {
+    margin: 1rem 0 2rem;
+    font-size: 1rem;
+  }
+  .header .header-content .banner-section .banner-content .banner-text .btn {
+    margin: auto auto auto 0;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    width: 70%;
+    min-width: 250px;
+    max-width: 400px;
+  }
+  .header .header-content .banner-section .banner-content .banner-video {
+    width: 100%;
+    max-width: 120vh;
+  }
+  .header .header-content .banner-section .decor-text {
+    font-size: 10vw;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+  .header .header-content .banner-section .arrow-container {
+    margin: auto auto 0;
+  }
+}
+
+@media screen and (min-width: 1230px) {
+  .header .circle {
+    width: 55vw;
+    height: 55vw;
+    left: -140px;
+    top: -190px;
+  }
+  .header .header-content {
+    width: 85%;
+  }
+  .header .header-content .banner-section .banner-content {
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
+  }
+  .header .header-content .banner-section .banner-content .banner-text h1 {
+    font-size: 4rem;
+  }
+  .header .header-content .banner-section .banner-content .banner-text p {
+    margin: 1rem 0 3rem;
+    font-size: 1.2rem;
+  }
+  .header .header-content .banner-section .banner-content .banner-text .btn {
+    font-size: 1.5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

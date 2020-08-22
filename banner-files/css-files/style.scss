@@ -1,0 +1,348 @@
+// Color Variables
+$dark-primary-color: rgb(11, 19, 43);
+$primary-color: rgb(28, 37, 65);
+$light-primary-color: rgb(58, 80, 107);
+$light-primary-text-color: rgba(58, 80, 107, 0.2);
+$accent-color: rgb(111, 255, 233);
+$dark-accent-color: rgb(91, 192, 190);
+
+$primary-text-color: rgb(255, 255, 255);
+$secondary-text-color: rgb(0, 0, 0);
+
+$heading-text: 'Maven Pro', sans-serif;
+$paragraph-text: 'Tajawal', sans-serif;
+
+// ----------- Int Variables ----------- 
+// Mobile and Tablet
+$mob-bg-circle-size: 150vw;
+$mob-min-bg-circle-size: 400px;
+$mob-max-bg-circle-size: 872px;
+// Laptop
+$sm-lap-bg-circle-size: 65vw; // Small Laptop
+$lg-lap-bg-circle-size: 55vw; // Large Laptop
+$lap-max-bg-circle-size: 850px;
+// ----------- Int Variables ----------- 
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+
+.header {
+    background: $primary-color;
+    display: flex;
+    flex-direction: column;
+    height: fit-content; 
+    text-align: center;
+
+    .circle {
+        background: $dark-primary-color;
+        width: $mob-bg-circle-size;
+        height: $mob-bg-circle-size;
+        min-width: $mob-min-bg-circle-size;
+        min-height: $mob-min-bg-circle-size;
+        max-width: $mob-max-bg-circle-size;
+        max-height: $mob-max-bg-circle-size;
+        position: absolute;
+        left: -265px;
+        top: -146px;
+        border-radius: 100%;
+    }
+
+    .header-content {
+        z-index: 1;
+        padding: 0 1rem 2rem;
+        color: $primary-text-color;
+
+        .banner-section {
+            margin-top: 2rem;
+
+            .banner-content {
+                display: grid;
+                row-gap: 16vw;
+            
+
+                .banner-text {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+    
+                    h1 {
+                        font-family: $heading-text;
+                        color: $accent-color;
+                        font-size: 9vw;
+                    }
+    
+                    p {
+                        font-family: $paragraph-text;
+                        font-size: 4vw;
+                        margin: 1rem 0 2rem;
+                    }
+    
+                    .btn {
+                        border-radius: 8px;
+                        background: $accent-color;
+                        color: $secondary-text-color;    
+                        font-family: $heading-text;
+                        font-size: 5vw;
+                        padding: 0.8rem 1rem;
+                        width: 80%;
+                        margin: auto;
+                        transition: ease 0.2s all;
+    
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $dark-accent-color;
+                        }
+                    }
+                }
+    
+                .banner-video {
+                    margin: auto;
+                    width: 100%;
+                    border-radius: 1.125rem;
+                    border: 2px solid $dark-accent-color;
+                }
+            }
+            
+            
+
+            .decor-text {
+                font-family: $heading-text;
+                font-weight: 700;
+                font-size: 20vw;
+                color: $light-primary-text-color;
+                margin: 1rem auto;
+            }
+
+            .arrow-container {
+                margin: auto;
+                width: fit-content;
+                position: relative;
+                animation: up-down 2s infinite;
+
+                .arrow {
+                    width: 2rem;
+                    height: 1rem;
+                    display: block;
+                    stroke: $light-primary-color;
+                }
+
+                .first-arrow {
+                    stroke: $light-primary-color;
+                    animation: color-change 2s infinite;
+                }
+
+                .second-arrow {
+                    stroke: $accent-color;
+                    animation: color-change 2s infinite;
+                }
+
+                @keyframes color-change {
+                    50% {
+                        stroke: $accent-color;
+                    }
+
+                    100% {
+                        stroke: $light-primary-color;
+                    }
+                }
+            }    
+            
+            @keyframes up-down {
+                0% {
+                    top: 0;
+                }
+
+                50% {
+                    top: 1rem;
+                }
+
+                100% {
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+// Tablet: iPad
+@media screen and (min-width: 494px) {
+    .header {
+        width: 100%;
+
+        .circle {
+            top: -220px;
+            left: -180px;
+            max-width: 120vw;
+            max-height: 120vw;
+        }
+
+        .header-content {
+            padding: 0 3rem 2rem;
+
+            .banner-section {
+                .banner-content {
+                    row-gap: 10vw;
+
+                    .banner-text {
+                        h1 {
+                            font-size: 4rem;
+                        }
+
+                        p {
+                            font-size: 1.5rem;
+                            margin: 1rem 0 3rem;
+                        }
+
+                        .btn {
+                            font-size: 1.8rem;
+                            width: 60%;
+                            max-width: 400px;
+                            min-width: 300px;
+                            padding: 1rem;
+                        }
+                    }
+                }
+
+                .decor-text {
+                    font-size: 16vw;
+                }
+
+                .arrow-container {
+                    .arrow {
+                        width: 2.5rem;
+                        height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Desktop: Small Laptop
+@media screen and (min-width: 882px) {
+    .header {
+        height: calc(100vh - 56px);
+
+        .circle {
+            width: $sm-lap-bg-circle-size;
+            height: $sm-lap-bg-circle-size;
+            left: -170px;
+            top: -170px;
+            max-width: $lap-max-bg-circle-size;
+            max-height: $lap-max-bg-circle-size;
+        }
+
+        .header-content {
+            padding: 0;
+            width: 90%;
+            margin: auto;
+
+            .banner-section {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                height: 80vh;
+
+                .banner-content {
+                    grid-template-columns: 1fr 1.5fr;
+                    column-gap: 1.8rem;
+                    margin: auto;
+
+                    .banner-text {
+                        text-align: left;
+                        height: fit-content;
+                        margin: auto 0;
+
+                        h1 {
+                            font-size: 3rem;
+                        }
+
+                        p {
+                            margin: 1rem 0 2rem;
+                            font-size: 1rem;
+                        }
+
+                        .btn {
+                            margin: auto auto auto 0;
+                            padding: 0.8rem 1rem;
+                            text-align: center;
+                            font-size: 1.3rem;
+                            width: 70%;
+                            min-width: 250px;
+                            max-width: 400px;
+                        }
+                    }
+
+                    .banner-video {
+                        width: 100%;
+                        max-width: 120vh;
+                    }
+                }
+
+                .decor-text {
+                    font-size: 10vw;
+                    z-index: -1;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    margin-bottom: 0;
+                }
+
+                .arrow-container {
+                    margin: auto auto 0;
+                }
+            }
+        }
+    }
+}
+
+// Desktop: Big Laptop 1158
+@media screen and (min-width: 1230px) {
+    .header {
+
+        .circle {
+            width: $lg-lap-bg-circle-size;
+            height: $lg-lap-bg-circle-size;
+            left: -140px;
+            top: -190px;
+        }
+
+        .header-content {
+            width: 85%;
+
+            .banner-section {
+
+                .banner-content {
+                    column-gap: 3rem;
+
+                    .banner-text {
+
+                        h1 {
+                            font-size: 4rem;
+                        }
+
+                        p {
+                            margin: 1rem 0 3rem;
+                            font-size: 1.2rem;
+                        }
+
+                        .btn {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
