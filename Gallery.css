@@ -4,12 +4,29 @@ h1{
 }
 
 #outer{
-    background-image: linear-gradient(130deg, #0B132B, #1C2541);
+    background-image: linear-gradient(130deg, #0B132B, #1C2541 );
 }
 
 .row{
     margin-left: 70px;
     
-   
 }
 
+.card {
+  height: 300px; /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.card img {
+  
+  transform-origin: 50% 65%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(150%);
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.card:hover img {
+ filter: brightness(100%);
+  transform: scale(1.4);
+}
