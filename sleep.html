@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<script src="https://use.fontawesome.com/5a55d06455.js"></script>
+<link rel="stylesheet" href="footer.css">
+    <title>Sleep</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    html {
+        scroll-behavior: smooth;
+        }
+    body{
+        font-family: 'Open Sans', sans-serif;
+    }
+    .side-nav{
+        position: absolute;
+        top:10vh;
+        left:0px;
+        background-image: linear-gradient(to right, #0b132b, #1c2541);
+        width: 20%;
+        height:550%;
+    }
+    .topnav{
+        background-image: linear-gradient(to right, #0b132b, #1c2541);
+        width: 100%;
+        height: 10vh;
+        top: 0;
+        margin: 0;
+    }
+    .navlinks{
+      
+       height: 20%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content:space-around;
+        align-items: center;
+        list-style: none;
+        
+    }
+    .navlinks a{
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .navlinks a:hover{
+        color: rgb(0, 195, 255);
+    }
+    .burger{
+        position: absolute;
+        top: 3vh;
+        left: 5vw;
+        display: none;
+    }
+    .burger div{
+        
+        width: 25px;
+        height:3px ;
+        background-color: whitesmoke;
+        margin: 5px;
+        transition: all 0.3s ease;
+
+    }
+    .topnav{
+        display: flex;
+    }
+    .topnav-links{
+        display: flex;
+        width: 30%;
+        justify-content: space-around;
+        align-items:stretch;
+        margin-left: auto;
+        list-style: none;
+        margin-right: 8vw;
+    }
+    .topnav-links a{
+        text-decoration: none;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        position: absolute;
+        top: 5vh;
+    }
+    .topnav-links a:hover{
+        color: rgb(185, 185, 194);
+    }
+    .company{
+      display: flex;
+     position: absolute;
+     top: 5vh;
+     left: 30vw;
+     font-weight: bold;
+    }
+    .active{
+        background-color: #3a506bb7;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .container{
+        
+        margin-top: 5vh;
+        margin-left: 30vw;
+        width: 60%;
+    }
+    p,ul{
+        font-size: 17px;
+        margin-top: 4vh;
+    }
+  li{
+    margin: 0 0 3vh 0;
+  }
+  .img{
+     margin: 10vh;
+     border-radius: 10px;
+     box-shadow: 10px 10px 5px grey;
+  }
+  .scroll{
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            color: gray;
+        }
+
+        .arrow{
+           display: flex;
+           justify-content: center;
+            margin-top: 2vh;
+            font-size: 40px;
+            color: rgb(75, 219, 219);
+        }
+        #sleep{
+            margin-top: 50%;
+        }
+        footer{
+            margin-top: 10vh;
+        }
+    
+    
+    @media screen  and (max-width:768px ){
+        
+        .side-nav{
+    
+            transform: translateX(-100%);
+            transition: transform 0.5s ease-in;
+            width: 100%;
+            opacity: 1;
+        }
+        .topnav-links{
+            width: 50%;
+        }
+        .topnav-links a{
+            font-size: 15px;
+        }
+        .burger{
+            display: block;
+            cursor: pointer;
+        }
+        .nav-active{
+            transform: translateX(0%);
+
+        }
+        .toggle .line1{           
+            transform: rotate(-45deg)translate(-5px,6px);
+        }
+        .toggle .line2{           
+            opacity: 0;
+}
+.toggle .line3{           
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+.hide{
+    opacity: 0;
+}
+    }
+</style>
+<body>
+    
+    <div class="topnav">
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <div class="company" style="color: white;">UPLIFT</div>
+        <ul class="topnav-links">
+            <li><a href="#" class="active">Article</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+    </div>
+    <nav class="side-nav">
+        <h2 style="color:azure; text-align:center ;font-size: 17px; margin-top: 5vh;">Choose Articles</h2>
+        <ul class="navlinks">
+            <li><a href="sidenav1.html">Tame your Temper</a></li>
+            <li><a href="#">Sleep a Necessity</a></li>
+            <li><a href="#">Article1</a></li>
+            <li><a href="#">Article1</a></li>
+            <li><a href="#">Article1</a></li>
+            <li><a href="#">Article1</a></li>
+        </ul>
+       
+    </nav>
+    <div class="container">
+            <div class="anger">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 style="font-size: 30px; line-height: 5vh; margin-top: 180px;">
+                            <b>SLEEP</b> <br>
+                             <span style="font-size: 18px; color: grey;">  The Ultimate Guide on How to Get a
+                                 Better Night’s Sleep</span>
+                         </h2>
+                    </div>
+                    <div class="col-lg-6"><img src="article/sleep.png" width="450px" height="450px"></div>
+                </div>
+                <div class="scroll">Scroll down to read!</div>
+
+                <a href="#sleep"><span class="glyphicon glyphicon-menu-down arrow"></span></a>
+                <div id="sleep">
+                    <h2 style="font-size: 25px;font-weight: bold;margin-top: 10vh;">SLEEP HEALTHY</h2>
+                    <p style="margin-top: 5vh; ">We do it every night, and over the course of our life we will spend
+                         approximately a third of our time doing it: sleep. But what is it? Doctors and scientists are
+                          really just beginning to understand all the important ways that sleep affects our health and
+                           well-being — and all of the reasons we do it.</p>
+                    
+                    <p>
+                        According to Rafael Pelayo, MD, clinical professor of psychiatry and behavioral sciences
+                         and a sleep specialist at the Stanford Sleep Medicine Center in Redwood City, California,
+                          “Sleep is a natural, restorative, physiological process characterized by a perceptual
+                           disengagement [meaning you tune out from whatever’s going on around you], and must be 
+                           rapidly reversible.”
+                    </p>
+                    <img  class="img" src="article/womensleep.jpg" width="80%" height="40%">
+                    <p>
+                        Sleep experts at Harvard Medical School’s Division of Sleep Medicine use a similar
+                         definition for sleep. They say it can be characterized as:
+                    </p>
+                        <ul>
+                            <li>
+                                A period of being less active
+                            </li>
+                            <li>
+                                A function of the body typically associated with a lying down posture and closed eyes
+                            </li>
+                            <li>
+                                A process whereby you’re less responsive to external stimuli
+
+                            </li>
+                            <li>
+                                A state of consciousness that’s easy to get out of (unlike other 
+                                states of consciousness, such as hibernation or coma)
+                            </li>
+                           <li>
+                            Being associated with certain brain wave activity patterns and certain
+                             physiological changes, including a drop in blood pressure and body temperature
+                           </li>
+                        </ul>
+    
+                   
+                    <p>Regardless of the words used to describe it, the bottom line is that we need sleep to
+                         function, Dr. Pelayo says. It’s a critical process that allows the body to function and 
+                         sstay healthy — and it’s especially important for the brain.</p>
+
+                         <p><b>How to Actually Sleep Better Tonight</b></p>
+
+                     <p>There’s no one foolproof formula for getting a good night’s sleep, but there are several
+                          steps you can take that have been associated with better sleep overall if you’re struggling 
+                          to clock the recommended number of hours of sleep you know you need — or if you wake up 
+                          feeling less rested than you want to be.</p>     
+                     <p>
+                        It’s important to check with your doctor or a sleep medicine doctor if you think you do
+                         have a more serious problem, or of another medical condition is interfering with your sleep.
+                     </p>  
+                     <p>
+                        But trying these fixes first is a good place to start:
+                     </p>  
+                     <ul>
+                         <li>
+                           <b>Stick to a consistent sleep-wake schedule.</b> 
+                            Aim to go to bed at the same time each night and wake up at the same time in the morning, 
+                            including on the weekends — and try not to vary it more than an hour or so. The times that 
+                             you regularly go to bed and wake up are the signals you give your body’s natural clock, and 
+                             when they’re consistent, that clock helps you wake up and fall asleep. If those signals are 
+                             out of whack, your body clock gets thrown off and you experience the same drowsiness associated
+                              with jet lag. You also may struggle to fall asleep at night or wake up when your alarm rings.
+                         </li>
+                         <li>
+                            <b>Watch caffeine intake.</b> Be especially careful with this later in the afternoon. Pelayo suggests
+                             avoiding caffeine within six hours of when you want to sleep.
+                         </li>
+                         <li>
+                            <b>Exercise regularly.</b> Research shows that regular exercise (at least 150 minutes of activity per
+                             week) is associated with better sleep, though it’s worth noting you should try to avoid intense
+                              exercise too close to bedtime, as it may make it tougher for some people to fall asleep.
+                               That's because a workout sends signals to the body that tend to wake you up, such as your 
+                               heart rate and body temperature increasing.  
+                         </li>
+                         <li>
+                            <b>Avoid bright lights and bright screens right before bed.</b> Blue light — the kind that comes
+                             from fluorescent bulbs, LEDs, and computer and cellphone screens — has been shown to actually
+                              send the same signals to the brain as sunlight, and block production of the hormone melatonin
+                               that tells the brain to go to sleep.
+                         </li>
+                         <li>
+                           <b> If you can’t sleep, don’t linger in bed.</b> This means at night if you’re having trouble 
+                           falling asleep for 20 minutes or longer, get out of bed and do something to make you tired, 
+                           such as reading or some gentle stretching. Staying in bed makes your body associated in-bed time
+                            as awake time, and it will actually be harder to fall asleep.
+                         </li>
+                         <li>
+                             <b>Don’t linger in bed in the morning either, and don't hit snooze.</b> It can be tempting 
+                             to wake up slowly, but that drowsy sleep (after you’ve initially woken up) is fragmented, 
+                             light sleep. If you did get a poor night’s sleep, your best remedy is getting up, going 
+                             about your day, and hitting your pillow at bedtime that evening, at which point your sleep
+                             drive will be strong and you’re more likely to actually reap the benefit of the deep 
+                             restorative sleep you need.</li>
+                     </ul>
+                  
+                   
+                </div>
+                
+            </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="row">
+            <div class="col-lg-4">A Website designed by <br>The Uplift Project
+                <p>© Company Inc.</p></div>
+            <div class="col-lg-5"><h5>Find Us</h5>
+                <div class="icons">
+                <i class="fa fa-instagram space"></i>
+                <i class="fa fa-linkedin space"></i>
+                <i class="fa fa-facebook space"></i>
+                <i class="fa fa-twitter space"></i>
+            </div>
+           
+            </div>
+            <div class="col-lg-3 links">
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+            </div>
+            
+        </div>
+    </footer>
+    
+    <script>
+        const navslide=()=>{
+            const burger=document.querySelector('.burger');
+            const nav =document.querySelector('.side-nav');
+            const content=document.querySelector('.container')
+
+            burger.addEventListener("click",()=>{
+                nav.classList.toggle('nav-active');
+                burger.classList.toggle('toggle');
+                content.classList.toggle('hide');
+            });
+           
+        }
+        navslide();
+    </script>
+</body>
+</html>
