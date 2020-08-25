@@ -1,6 +1,10 @@
-h1{
+.galleryh1{
+  background-image: linear-gradient(130deg, #0B132B, #1C2541 );
+    margin: 0;
     font-size: 4rem;
     text-align: center;
+    padding: 40vh 20vh 20vh 20vh;
+    color: #6fffe9;
 }
 
 #outer{

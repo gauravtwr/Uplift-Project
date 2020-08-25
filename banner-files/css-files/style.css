@@ -14,6 +14,10 @@ body {
           user-select: none;
 }
 
+footer{
+  height: 70vh;
+}
+
 .header {
   background: #1c2541;
   display: -webkit-box;
